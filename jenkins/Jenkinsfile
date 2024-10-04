@@ -1,9 +1,12 @@
 pipeline {
     agent any
+    tools {
+        git 'Default' // Or specify the name of the Git installation configured in Jenkins
+    }
     stages {
         stage('Build') {
             steps {
-                echo 'hlo wrld'
+                echo 'Hello World'
             }
         }
     }
